@@ -15,7 +15,7 @@ public abstract class ResourcePoolActionTest extends ActionTest{
 	MockResourcePool pool = new MockResourcePool(n);
 	ResourcefulUser<MockResource> user = new ResourcefulUser<MockResource>();
 	
-	protected ResourcePoolAction<MockResource> createAction() {
+	public ResourcePoolAction<MockResource> createAction() {
 		return createAction(pool,user);
 	}
 	
