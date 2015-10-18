@@ -18,7 +18,8 @@ public abstract class ActionTest {
 			while (!(action1.isFinished())){
 				action1.doStep();
 				assertFalse(action1.isReady());
-				assertTrue(action1.isInProgress());
+				if(!action1.isFinished())
+					assertTrue(action1.isInProgress());
 			}
 			assertFalse(action1.isReady());
 			assertFalse(action1.isInProgress());

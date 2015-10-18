@@ -57,7 +57,7 @@ public abstract class ResourcePool<R extends Resource> {
 	 */
 	public void freeResource(R resource) {
 		int indexResourceUsed = this.poolUsed.indexOf(resource);
-		if(indexResourceUsed == -1) {
+		if(indexResourceUsed != -1) {
 			this.poolUsed.remove(indexResourceUsed);
 			this.poolFree.add(resource);
 		}
