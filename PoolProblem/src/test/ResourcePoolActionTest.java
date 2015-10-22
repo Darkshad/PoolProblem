@@ -9,7 +9,7 @@ public abstract class ResourcePoolActionTest extends ActionTest{
 
 	int n = 2;
 	MockResourcePool pool = new MockResourcePool(n);
-	ResourcefulUser<MockResource> user = new ResourcefulUser<MockResource>();
+	ResourcefulUser<MockResource> user = new ResourcefulUser<MockResource>("mock");
 	
 	public ResourcePoolAction<MockResource> createAction() {
 		return createAction(pool,user);

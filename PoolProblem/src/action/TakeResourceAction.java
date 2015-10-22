@@ -25,14 +25,15 @@ public class TakeResourceAction<R extends Resource> extends ResourcePoolAction<R
 	 */
 	public void reallyDoStep() {
 		this.isReady = false;
+		System.out.println(user.getName() + " trying to take resource from the pool...");
 		
 		if(this.pool.hasAvailableResource()) {
 				this.user.setResource(this.pool.provideResource());
 				this.isFinished = true;
-				System.out.println("sucess");
+				System.out.println("sucess\n");
 			}
 		else
-			System.out.println("failed");
+			System.out.println("failed\n");
 	}
 
 }

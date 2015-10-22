@@ -34,7 +34,7 @@ public class ForeseebleAction extends Action{
 	 * @return true if this action is in progress,false if not
 	 */
 	public boolean isInProgress() {
-		return this.totalTime > this.currentTime;
+		return this.totalTime > this.currentTime && !this.isFinished();
 	}
 	
 	/**
@@ -49,13 +49,14 @@ public class ForeseebleAction extends Action{
 	 * The principal method which allow to pass through the state ready,in progress and finished 
 	 */
 	public void reallyDoStep() {
-		this.currentTime = this.currentTime--;
+			this.currentTime--;
+		System.out.println(this.toString());
 	}
 	
 	/**
 	 * Show the statue of this action
 	 */
 	public String toString() {
-		return (this.name + "(" + this.currentTime + "/" + this.totalTime + ")" );
+		return (this.name + "(" + (this.totalTime-this.currentTime) + "/" + this.totalTime + ")\n" );
 	}
 }
