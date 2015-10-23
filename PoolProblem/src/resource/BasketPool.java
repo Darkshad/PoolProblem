@@ -10,4 +10,10 @@ public class BasketPool extends ResourcePool<BasketResource>{
 		return new BasketResource();
 	}
 
+	@Override
+	public String getName() {
+		BasketResource b = new BasketResource();
+		return b.description();
+	}
+
 }

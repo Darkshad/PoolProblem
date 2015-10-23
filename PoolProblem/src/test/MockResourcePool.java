@@ -10,5 +10,10 @@ public class MockResourcePool extends ResourcePool<MockResource> {
 	protected MockResource createResource() {
 		return new MockResource();
 	}
+	@Override
+	public String getName() {
+		MockResource m = new MockResource();
+		return m.description();
+	}
 
 }

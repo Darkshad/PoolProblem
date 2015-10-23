@@ -10,4 +10,10 @@ public class CubiclePool extends ResourcePool<CubicleResource>{
 		return new CubicleResource();
 	}
 
+	@Override
+	public String getName() {
+		CubicleResource c = new CubicleResource();
+		return c.description();
+	}
+
 }

@@ -64,4 +64,7 @@ public abstract class ResourcePool<R extends Resource> {
 		else 
 			throw new IllegalArgumentException() ;
 	}
+	
+	public abstract String getName();
+	
 }
