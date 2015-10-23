@@ -10,11 +10,6 @@ import action.Scheduler;
 
 public class FairSchedulerTest extends TestScheduler {
 
-	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
-
 	@Override
 	public Scheduler createScheduler(Action action1) {
 		FairScheduler sc = new FairScheduler();
@@ -27,4 +22,9 @@ public class FairSchedulerTest extends TestScheduler {
 		return new OneStepAction();
 	}
 
+	@Test
+	public void testAddAction(){
+		
+	}
+	
 }
