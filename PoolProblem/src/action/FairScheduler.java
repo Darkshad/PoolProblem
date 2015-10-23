@@ -7,18 +7,8 @@ public class FairScheduler extends Scheduler{
 
 	// Attributes
 	
-	LinkedList<Action> list_action;
 	Iterator<Action> it;
 	
-	
-	// Constructor
-	
-	public FairScheduler(boolean isReady,boolean isInitialized){
-		this.isReady = isReady;
-		this.isInitialized = isInitialized;
-		list_action = new LinkedList<Action>();
-		it = list_action.iterator();
-	}
 	
 	// Methods
 	
@@ -28,6 +18,7 @@ public class FairScheduler extends Scheduler{
 	 */
 	public void addAction(Action action){
 		list_action.add(action);
+		this.isInitialized = false;
 	}
 	
 	/**
@@ -42,7 +33,12 @@ public class FairScheduler extends Scheduler{
 	 * @return - It returns the next action. 
 	 */
 	public Action getNextAction(){
-		return it.next();
+		if (it.hasNext())
+			return it.next();
+		else{
+			it = list_action.iterator();
+			return it.next();
+		}
 	}
 	
 	/**
@@ -52,4 +48,10 @@ public class FairScheduler extends Scheduler{
 	public LinkedList<Action> getAction(){
 		return this.list_action;
 	}
+	
+	public void doStep(){
+		it = list_action.iterator();
+		super.doStep();
+	}
+	
 }

@@ -7,8 +7,9 @@ public abstract class Scheduler extends Action{
 	
 	//Attributes
 	
-	protected boolean isReady;
-	protected boolean isInitialized;
+	protected boolean isReady = true;
+	protected boolean isInitialized = false;
+	LinkedList<Action> list_action = new LinkedList<Action>();
 	
 	// Methods
 
