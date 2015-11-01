@@ -1,5 +1,7 @@
 package action;
 
+import exception.ActionFinishedException;
+
 /** Class Action of the package action
  * 	The class represent an action.
  * @author Guyot Clement - Cornaire Francis
@@ -36,15 +38,19 @@ public abstract class Action {
 	/**
 	 * This method permit to execute a step of an action.
 	 * When the action is not finished the method call the method reallyDoStep
+	 * @throws ActionFinishedException 
 	 */
-	public void doStep(){
+	public void doStep() throws ActionFinishedException{
 		if(!isFinished())
 			reallyDoStep();
+		else 
+			throw new ActionFinishedException();
 	}
 	
 	/**
 	 * This method permit to check if the doStep works good.
 	 * A verifier !!!!!!!!!!!
 	 */
-	public abstract void reallyDoStep();
+	public abstract void reallyDoStep() throws ActionFinishedException;
+	public abstract String getName();
 }

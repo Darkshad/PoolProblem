@@ -2,6 +2,8 @@ package action;
 
 import java.util.LinkedList;
 
+import exception.ActionFinishedException;
+
 
 public abstract class Scheduler extends Action{
 	
@@ -29,7 +31,7 @@ public abstract class Scheduler extends Action{
 	}
 	
 	@Override
-	public void reallyDoStep(){
+	public void reallyDoStep() throws ActionFinishedException{
 		Action nextAction = getNextAction();
 		nextAction.doStep();
 		if(nextAction.isFinished()){
@@ -38,10 +40,14 @@ public abstract class Scheduler extends Action{
 	}
 	
 	@Override
-	public void doStep(){
+	public void doStep() throws ActionFinishedException{
 		this.isReady = false;
+		if (this.getName() != null)
+			System.out.println(this.getName() + "'s turn");
 		super.doStep();
 	}
+	
+
 	
 	protected abstract void addAction(Action action);
 	protected abstract void removeFinishedAction();

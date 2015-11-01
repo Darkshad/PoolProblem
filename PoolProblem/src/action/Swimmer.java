@@ -18,23 +18,15 @@ public class Swimmer extends SequentialScheduler {
 		cubicleRes = new ResourcefulUser<CubicleResource>(name);
 		this.addAction(new TakeResourceAction<BasketResource>(basketRes,baskets));
 		this.addAction(new TakeResourceAction<CubicleResource>(cubicleRes,cubicles));
-		this.addAction(new ForeseebleAction(nbUndress,"undress"));
-		this.addAction(new ForeseebleAction(nbSwim,"swimming"));
-		this.addAction(new ForeseebleAction(nbDress,"dressing"));
+		this.addAction(new ForeseebleAction(nbUndress,"undress",name));
+		this.addAction(new ForeseebleAction(nbSwim,"swimming",name));
+		this.addAction(new ForeseebleAction(nbDress,"dressing",name));
 		this.addAction(new FreeResourceAction<CubicleResource>(cubicleRes,cubicles));
 		this.addAction(new FreeResourceAction<BasketResource>(basketRes,baskets));
-		
-		
-		
-		
-		
-		
-
-
-
-
-
-
+	}
+	
+	public String getName() {
+		return this.basketRes.getName();
 	}
 
 }

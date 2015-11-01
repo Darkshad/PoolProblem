@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
+import exception.ActionFinishedException;
 import resource.ResourcePool;
 import resource.ResourcefulUser;
 import action.ResourcePoolAction;
@@ -18,7 +19,7 @@ public class TakeResourceActionTest extends ResourcePoolActionTest {
 	}
 
 	@Test
-	public void TestWaitingTakeResource() {
+	public void TestWaitingTakeResource() throws ActionFinishedException {
 		ResourcePoolAction<MockResource> r = this.createAction();
 		ArrayList<MockResource> allResources = new ArrayList<MockResource>(this.n);
 		for(int i = 0; i<n ; i++) 

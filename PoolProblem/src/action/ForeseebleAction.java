@@ -12,12 +12,14 @@ public class ForeseebleAction extends Action{
 	protected int totalTime;
 	protected int currentTime;
 	protected String name;
+	protected String userName;
 
 	//Constructor
-	public ForeseebleAction(int totalT,String name) {
+	public ForeseebleAction(int totalT,String name,String userName) {
 		this.totalTime = totalT;
 		this.currentTime = totalT;
 		this.name = name;
+		this.userName = userName;
 	}
 	
 	//Methods
@@ -57,6 +59,12 @@ public class ForeseebleAction extends Action{
 	 * Show the statue of this action
 	 */
 	public String toString() {
-		return (this.name + "(" + (this.totalTime-this.currentTime) + "/" + this.totalTime + ")\n" );
+		return (" " + this.name + "(" + (this.totalTime-this.currentTime) + "/" + this.totalTime + ")" );
 	}
+
+	@Override
+	public String getName() {
+		return this.userName;
+	}
+
 }

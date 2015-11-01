@@ -1,16 +1,17 @@
 package test;
 import action.*;
-
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import exception.ActionFinishedException;
 
 public abstract class ActionTest {
 
 	public abstract Action createAction();
 	
 	@Test
-	public void onlyOneValidStateAtEachMoment() {
+	public void onlyOneValidStateAtEachMoment() throws ActionFinishedException {
 			Action action1 = createAction();
 			assertTrue(action1.isReady());
 			assertFalse(action1.isInProgress());

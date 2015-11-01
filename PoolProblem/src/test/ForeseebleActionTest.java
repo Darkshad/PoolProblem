@@ -7,7 +7,7 @@ public class ForeseebleActionTest extends ActionTest {
 	
 	@Override
 	public Action createAction() {
-		return new ForeseebleAction(5,"test");
+		return new ForeseebleAction(5,"test","");
 	}
 
 }

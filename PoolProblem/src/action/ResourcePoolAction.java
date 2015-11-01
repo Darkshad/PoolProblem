@@ -34,4 +34,7 @@ public abstract class ResourcePoolAction<R extends Resource> extends Action {
 	public boolean isFinished() {
 		return this.isFinished;
 	}
+	
+
+	
 }

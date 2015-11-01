@@ -3,12 +3,13 @@ package action;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import exception.ActionFinishedException;
+
 public class FairScheduler extends Scheduler{
 
 	// Attributes
 	
-	Iterator<Action> it;
-	
+	Iterator<Action> it = null;
 	
 	// Methods
 	
@@ -18,7 +19,7 @@ public class FairScheduler extends Scheduler{
 	 */
 	public void addAction(Action action){
 		list_action.add(action);
-		this.isInitialized = false;
+		this.isInitialized = true;
 	}
 	
 	/**
@@ -33,7 +34,7 @@ public class FairScheduler extends Scheduler{
 	 * @return - It returns the next action. 
 	 */
 	public Action getNextAction(){
-		if (it.hasNext())
+		if (it.hasNext()) 
 			return it.next();
 		else{
 			it = list_action.iterator();
@@ -49,9 +50,15 @@ public class FairScheduler extends Scheduler{
 		return this.list_action;
 	}
 	
-	public void doStep(){
-		it = list_action.iterator();
+	public void doStep() throws ActionFinishedException{
+		if (this.it == null)
+			it = list_action.iterator();
 		super.doStep();
 	}
-	
+
+	@Override
+	public String getName() {
+		return null;
+	}
+
 }

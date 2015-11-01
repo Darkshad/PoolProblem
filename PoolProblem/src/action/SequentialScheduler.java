@@ -27,4 +27,10 @@ public class SequentialScheduler extends Scheduler {
 		return this.list_action;
 	}
 
+	@Override
+	public String getName() {
+		return null;
+	}
+
+
 }

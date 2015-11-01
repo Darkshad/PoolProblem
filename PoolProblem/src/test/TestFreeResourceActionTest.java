@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import exception.ActionFinishedException;
 import resource.ResourcePool;
 import resource.ResourcefulUser;
 import action.FreeResourceAction;
@@ -21,7 +22,7 @@ public class TestFreeResourceActionTest extends ResourcePoolActionTest{
 	}
 
 	@Test
-	public void testFreeResourceAction() {
+	public void testFreeResourceAction() throws ActionFinishedException {
 		ResourcePoolAction<MockResource> r = createAction();
 		assertTrue(r.isReady());
 		assertFalse(r.isInProgress());

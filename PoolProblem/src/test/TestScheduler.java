@@ -6,12 +6,14 @@ import action.Action;
 
 import org.junit.Test;
 
+import exception.ActionFinishedException;
+
 public abstract class TestScheduler extends ActionTest{
 
 	public abstract Scheduler createScheduler(Action action1);
 	
 	@Test
-	public void SchedulerTestWithOneStepAction() {
+	public void SchedulerTestWithOneStepAction() throws ActionFinishedException {
 		OneStepAction action1 = new OneStepAction();
 		Scheduler sc = createScheduler(action1);
 		
@@ -24,7 +26,7 @@ public abstract class TestScheduler extends ActionTest{
 		assertTrue(action1.isFinished());
 	}
 	
-	public void SchedulerTestWithScheduler(){
+	public void SchedulerTestWithScheduler() throws ActionFinishedException{
 		Action action1 = createAction();
 		Scheduler sc = createScheduler(action1);
 		Scheduler sc2 = createScheduler(sc);

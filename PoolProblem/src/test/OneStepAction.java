@@ -19,6 +19,11 @@ public class OneStepAction extends Action {
 	public void reallyDoStep(){
 		isReady = false;
 	}
+
+	@Override
+	public String getName() {
+		return null;
+	}
 	
 	// coucou test 
 }
