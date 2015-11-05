@@ -47,10 +47,6 @@ public abstract class Action {
 			throw new ActionFinishedException();
 	}
 	
-	/**
-	 * This method permit to check if the doStep works good.
-	 * A verifier !!!!!!!!!!!
-	 */
 	public abstract void reallyDoStep() throws ActionFinishedException;
 	public abstract String getName();
 }
