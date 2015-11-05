@@ -5,6 +5,13 @@ import java.util.LinkedList;
 
 import exception.ActionFinishedException;
 
+/**
+ * Class FairScheduler from the package action
+ * A FairScheduler is a scheduler which make his step with timeshare
+ * @author Cornaire Francis - Guyot Clement
+ * Licence 3 Miage - 2015/2016
+ */
+
 public class FairScheduler extends Scheduler{
 
 	// Attributes

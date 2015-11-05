@@ -4,6 +4,12 @@ import java.util.LinkedList;
 
 import exception.ActionFinishedException;
 
+/**
+ * Class Scheduler from package action
+ * A scheduler is an action which is DoStep is to do the action of all of action contained in his list of action
+ * @author Cornaire Francis - Guyot Clement
+ * Licence 3 Miage - 2015/2016
+ */
 
 public abstract class Scheduler extends Action{
 	
@@ -44,9 +50,7 @@ public abstract class Scheduler extends Action{
 	}
 	
 	/**
-	 * This method permit to execute the method doStep.
-	 * A simple action is created and next the method make a doStep.
-	 * Finally the method test, if the action is finished then she's removed from the scheduler. 
+	 * This method permit to execute the next action of all of his action (depends of getNextAction).
 	 */
 	@Override
 	public void reallyDoStep() throws ActionFinishedException{
@@ -58,7 +62,7 @@ public abstract class Scheduler extends Action{
 	}
 	
 	/**
-	 * The method doStep permit to the scheduler to make an action. 
+	 * The method doStep permit to the scheduler to make an action (see the method reallyDostep). 
 	 */
 	@Override
 	public void doStep() throws ActionFinishedException{

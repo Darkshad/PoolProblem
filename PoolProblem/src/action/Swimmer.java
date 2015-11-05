@@ -25,9 +25,9 @@ public class Swimmer extends SequentialScheduler {
 	 * @param name - The name of the swimmer.
 	 * @param baskets - The baskets the swimmer has to take.
 	 * @param cubicles - The cubicles the swimmer has to take.
-	 * @param nbUndress - The number of step the swimmer need to do to realise to undress.
-	 * @param nbSwim - The number of step the swimmer need to do to swim.
-	 * @param nbDress - The number of step the swimmer need to do to dress.
+	 * @param nbUndress - The number of step the swimmer need to undress.
+	 * @param nbSwim - The number of step the swimmer need to swim.
+	 * @param nbDress - The number of step the swimmer need to dress.
 	 */
 	public Swimmer(String name,BasketPool baskets,CubiclePool cubicles,int nbUndress,int nbSwim,int nbDress) {
 		basketRes = new ResourcefulUser<BasketResource>(name);

@@ -1,8 +1,11 @@
 package test;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
+/**
+ * Class FairSchedulerTest from the package test
+ * This class is in charge of the test of the class FairScheduler
+ * @author Cornaire Francis - Guyot Clement
+ * Licence 3 Miage - 2015/2016
+ */
 
 import action.Action;
 import action.FairScheduler;
@@ -22,9 +25,6 @@ public class FairSchedulerTest extends TestScheduler {
 		return new OneStepAction();
 	}
 
-	@Test
-	public void testAddAction(){
-		
-	}
+	
 	
 }

@@ -12,7 +12,14 @@ import resource.ResourcefulUser;
 import action.FreeResourceAction;
 import action.ResourcePoolAction;
 
-public class TestFreeResourceActionTest extends ResourcePoolActionTest{
+/**
+ * Class FreeResourceActionTest from the package test
+ * This class is in charge of the test of the class FreeResourceAction
+ * @author Cornaire Francis - Guyot Clement
+ * Licence 3 Miage - 2015/2016
+ */
+
+public class FreeResourceActionTest extends ResourcePoolActionTest{
 
 	@Override
 	protected ResourcePoolAction<MockResource> createAction(ResourcePool<MockResource> pool, ResourcefulUser<MockResource> user) {

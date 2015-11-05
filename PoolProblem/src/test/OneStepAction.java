@@ -1,6 +1,13 @@
 package test;
 import action.*;
 
+/**
+ * Class OneStepAction from the package test
+ * An action used for test (need 1 step to finish)
+ * @author Cornaire Francis - Guyot Clement
+ * Licence 3 Miage - 2015/2016
+ */
+
 public class OneStepAction extends Action {
 	
 	protected boolean isReady = true;
@@ -25,5 +32,4 @@ public class OneStepAction extends Action {
 		return null;
 	}
 	
-	// coucou test 
 }

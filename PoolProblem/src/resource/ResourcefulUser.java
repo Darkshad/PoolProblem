@@ -1,5 +1,12 @@
 package resource;
 
+/**
+ * Class ResourcefulUser from the package resource
+ * This class represent an user with a resource 
+ * @author Cornaire Francis - Guyot Clement
+ * Licence 3 Miage - 2015/2016
+ */
+
 public class ResourcefulUser<R extends Resource> {
 	//Attribute
 	protected R resource;

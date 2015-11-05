@@ -1,5 +1,12 @@
 package resource;
 
+/**
+ * Class BasketPool from the package resource
+ * A BasketPool is a basket administrator
+ * @author Cornaire Francis - Guyot Clement
+ * Licence 3 Miage - 2015/2016
+ */
+
 public class BasketPool extends ResourcePool<BasketResource>{
 	
 	/**
@@ -20,7 +27,7 @@ public class BasketPool extends ResourcePool<BasketResource>{
 	
 	/**
 	 * This method permit to get the name of the resource.
-	 * It will printing "basket"
+	 * It will print "basket"
 	 */
 	@Override
 	public String getName() {

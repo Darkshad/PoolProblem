@@ -4,6 +4,12 @@ import action.Swimmer;
 import resource.BasketPool;
 import resource.CubiclePool;
 
+/**
+ * Class Pool from
+ * The main class,simulates the pool problem
+ * @author Cornaire Francis - Guyot Clement
+ * Licence 3 Miage - 2015/2016
+ */
 
 public class Pool {
 

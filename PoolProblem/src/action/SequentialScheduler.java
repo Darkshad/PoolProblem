@@ -3,7 +3,8 @@ package action;
 import java.util.LinkedList;
 
 /**
- * Class SequencialScheduler from package action.
+ * Class SequentialScheduler from package action.
+ * A SequentialScheduler is a scheduler which make his step sequentially
  * @author Guyot Clement - Cornaire Francis
  *	Licence 3 Miage - 2015/206.
  */
