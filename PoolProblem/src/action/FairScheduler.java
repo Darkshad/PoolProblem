@@ -50,6 +50,9 @@ public class FairScheduler extends Scheduler{
 		return this.list_action;
 	}
 	
+	/**
+	 * This method is used to make a step of an action.
+	 */
 	public void doStep() throws ActionFinishedException{
 		if (this.it == null)
 			it = list_action.iterator();
